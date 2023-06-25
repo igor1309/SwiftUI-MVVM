@@ -93,11 +93,12 @@ public struct FeatureContainerView: View {
     }
 }
 
-// Note: not public!!
+// Note: could be public or not
+//
 // Could be used
-// - in Xcode previews with actionable/interactive views - just need to wire `send` endpoint. For example, the preview could create a top or bottom overlay to render reactions to 'send' calls
-// - for snapshotting with different state values and traits (color scheme, dynamic type, locale, orientation, etc)
-// this component is decoupled from any model, thus could be connected any model or component with suitable interface (within the module)
+// - in Xcode previews with actionable/interactive views - just need to wire `send` endpoint. For example, the preview could create a top or bottom overlay to render reactions to 'sent' calls
+// - for snapshotting with different state values and traits (colour scheme, dynamic type, locale, orientation, etc)
+// this component is decoupled from any model, thus could be connected to/with any model or component with suitable interface (within the module, or outside if public)
 internal struct FeatureStateView: View {
     
     let state: FeatureState
